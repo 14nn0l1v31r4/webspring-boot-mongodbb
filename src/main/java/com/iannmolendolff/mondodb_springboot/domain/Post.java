@@ -11,11 +11,13 @@ import org.springframework.data.mongodb.core.mapping.Document;
 
 import com.iannmolendolff.mondodb_springboot.dto.AuthorDTO;
 import com.iannmolendolff.mondodb_springboot.dto.CommentDTO;
+import com.iannmolendolff.mondodb_springboot.repository.PostRepository;
 
 @Document
 public class Post implements Serializable {
 	
 	private static final long serialVersionUID = 1L;
+	
 	@Id
 	private String id;
 	private Date date;
@@ -105,7 +107,6 @@ public class Post implements Serializable {
 		Post other = (Post) obj;
 		return Objects.equals(id, other.id);
 	}
-	
 	
 
 }
