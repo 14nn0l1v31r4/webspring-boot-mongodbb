@@ -7,9 +7,9 @@ services:
     dockerfilePath: ./Dockerfile
     build: .
     env:
-      - key: SPRING_APPLICATION_NAME value: springboot-mongodb
-      - key: MONGO_HOST value: mongodb
-      - key: MONGO_PORT value: 27017
+      SPRING_APPLICATION_NAME value: springboot-mongodb
+      MONGO_HOST value: mongodb
+      MONGO_PORT value: 27017
     ports:
       - "8080:8080"
     depends_on:
