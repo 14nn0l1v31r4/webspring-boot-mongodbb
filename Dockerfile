@@ -1,5 +1,12 @@
+# Estágio de construção
+FROM maven:3.8-jdk-11-slim AS build
+COPY pom.xml /tmp/
+COPY src /tmp/src
+WORKDIR /tmp
+RUN mvn clean package
+
 # Usar uma imagem base do OpenJDK
-FROM openjdk:11-jre-slim
+FROM openjdk:11-jdk-slim
 
 # Diretório de trabalho dentro do contêiner
 WORKDIR /
