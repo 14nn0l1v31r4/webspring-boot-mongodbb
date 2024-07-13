@@ -15,10 +15,7 @@ WORKDIR /
 COPY pom.xml /
 COPY src /./src
 
-# Instalar as dependências do Maven e compilar a aplicação
-RUN apt-get update && \
-    apt-get install -y maven && \
-    mvn clean install
+
 
 # Expõe a porta que a aplicação vai rodar	
 EXPOSE 8080
